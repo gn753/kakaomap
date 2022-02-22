@@ -20,10 +20,27 @@ api 비동기 처리 위한곳
 
 css는 scss를 사용하며 style.scss 하나에 모든css를 넣을 예정입니다.
 
+## 제 프로젝트 설명
 
+원래는 비동기 데이터를 api 폴더에 넣을 생각이었는데
+어쩌다보니 mapSlice에 넣게 됐습니다.
 
+### 사람인에서 지도로 필요한 정보
 
-권장되는 프로젝트 기준,
-사람인 검색기능 개발
-사람인에서 받은 지역 연봉정보를 카카오 지도로 위치를 전달하려는데
-어떻게 할지 
+1. 지역 위치
+2. 회사명
+3. 채용공고URL
+4. 연봉
+5. 해당 직무
+
+### Store
+
+addressSlice,keywordSlice안의 내용
+
+- getAddressAsync : 지역 위치 데이터 조회.
+- getKeywordAsync: 회사 위치 조회
+  사용법은 dispatch(getAddressAsync(지역명))
+  사용법은 dispatch((getKeywordAsync(회사명,x좌표,y좌표))
+
+1. getAddressAsync로 지역 위치 좌표를 불러옵니다.
+2. getKeywordAsync(x,y,'회사명')에 인수로 1에서 얻은 좌표값 x,y와 회사명을 넣습니다.
