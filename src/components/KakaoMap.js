@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import mapInfoAPI from "../api/mapInfoAPI";
-import { dummyData } from "../api/dummyData";
 
 export default function KakaoMap() {
   useEffect(() => {
